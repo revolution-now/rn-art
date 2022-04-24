@@ -4,6 +4,7 @@
 coast-layers := \
   stencils      \
 	surf          \
+	border        \
 	beach
 
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
