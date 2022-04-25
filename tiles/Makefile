@@ -2,10 +2,11 @@
 # by exporting individual layers to png.
 
 coast-layers := \
-  stencils      \
-	surf          \
+	beach         \
 	border        \
-	beach
+	sand          \
+  stencils      \
+	surf
 
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
 
