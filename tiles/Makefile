@@ -10,7 +10,7 @@ coast-layers := \
 
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
 
-all: $(coast-outputs)
+all: $(coast-outputs) forest.png
 
 .PHONY: all
 
@@ -24,3 +24,6 @@ aseprite-cmd := aseprite --batch
 
 coast-%.png: $(coast-ase) $(Makefile)
 	$(aseprite-cmd) --layer=$* $(coast-ase) --save-as=$@
+
+forest.png: forest.ase
+	$(aseprite-cmd) --all-layers forest.ase --save-as=$@
