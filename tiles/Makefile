@@ -10,7 +10,7 @@ coast-layers := \
 
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
 
-all: $(coast-outputs) forest.png
+all: $(coast-outputs) forest.png resources.png
 
 .PHONY: all
 
@@ -27,3 +27,6 @@ coast-%.png: $(coast-ase) $(Makefile)
 
 forest.png: forest.ase
 	$(aseprite-cmd) --all-layers forest.ase --save-as=$@
+
+resources.png: resources.ase
+	$(aseprite-cmd) --layer=icons resources.ase --save-as=$@
