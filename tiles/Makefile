@@ -2,7 +2,7 @@
 # by exporting individual layers to png.
 
 coast-layers  := beach border sand stencils surf
-rivers-layers := bank cycle water
+rivers-layers := bank cycle water backdrop
 
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
 rivers-outputs := $(foreach l,$(rivers-layers),rivers-$(l).png)
