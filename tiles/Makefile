@@ -7,7 +7,7 @@ rivers-layers := bank cycle water backdrop
 coast-outputs := $(foreach l,$(coast-layers),coast-$(l).png)
 rivers-outputs := $(foreach l,$(rivers-layers),rivers-$(l).png)
 
-all: $(coast-outputs) $(rivers-outputs) forest.png units.png resources.png
+all: $(coast-outputs) $(rivers-outputs) forest.png resources.png
 
 .PHONY: all
 
@@ -25,9 +25,6 @@ rivers-%.png: rivers.ase $(Makefile)
 
 forest.png: forest.ase
 	$(aseprite-cmd) --all-layers forest.ase --save-as=$@
-
-units.png: units.ase
-	$(aseprite-cmd) --all-layers units.ase --save-as=$@
 
 resources.png: resources.ase
 	$(aseprite-cmd) --layer=icons resources.ase --save-as=$@
