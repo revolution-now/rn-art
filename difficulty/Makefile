@@ -1,6 +1,6 @@
 # Converts ase files into png (merging layers).
 
-all: characters.png
+all: characters.png discoverer.png
 
 .PHONY: all
 
@@ -10,5 +10,5 @@ Makefile := $(lastword $(MAKEFILE_LIST))
 # Run aseprite without starting the UI.
 aseprite-cmd := aseprite --batch
 
-characters.png: characters.ase $(Makefile)
-	$(aseprite-cmd) characters.ase --save-as=$@
+%.png: characters.ase $(Makefile)
+	$(aseprite-cmd) $*.ase --save-as=$@
