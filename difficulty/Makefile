@@ -10,5 +10,5 @@ Makefile := $(lastword $(MAKEFILE_LIST))
 # Run aseprite without starting the UI.
 aseprite-cmd := aseprite --batch
 
-%.png: characters.ase $(Makefile)
+%.png: %.ase $(Makefile)
 	$(aseprite-cmd) $*.ase --save-as=$@
