@@ -1,6 +1,6 @@
 # Converts ase files into png (merging layers).
 
-all: characters.png discoverer.png
+all: discoverer.png
 
 .PHONY: all
 
