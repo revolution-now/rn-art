@@ -3,7 +3,7 @@
 
 land-layers   := dirt shadows
 dock-layers   := overlay dock shadows
-houses-layers := buildings smoke docks
+houses-layers := buildings smoke docks road trees-far
 
 land-outputs   := $(foreach l,$(land-layers),land-$(l).png)
 dock-outputs   := $(foreach l,$(dock-layers),dock-$(l).png)
